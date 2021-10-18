@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "3b20be2f-b293-4c54-9b0f-8cd7a9e1b044",
+		"name": "E-Commerce_DB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication/Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\" : \"Dravin\",\r\n    \"last_name\" : \"Chauhan\",\r\n    \"email\" : \"dravin.c@valuebound.com\",\r\n    \"password\" : \"Valuebound\",\r\n    \"role\" : \"Trainee\",\r\n    \"profile\" : \"SET\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNmFhYTEzOGMyMzg2NGFiYWFkZjZhMiIsImlhdCI6MTYzNDM4NzA1MCwiZXhwIjoxNjM0NjQ2MjUwfQ.Rbe0RXUcLCyFytuslzX88tZPQZ3dN5yNq-m-PGqGO7E",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dravin.c@valuebound.com\",\r\n    \"password\" : \"Valuebound\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
